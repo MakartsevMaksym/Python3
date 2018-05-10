@@ -4,8 +4,7 @@ print("------------------------------------------------")
 city = input("Введите город (Пример: Kyiv): ")
 appid = "a0d60f299cee3a1d0f3e7950a2649389"
 
-res = requests.get("http://api.openweathermap.org/data/2.5/weather", params = {'q': city, 'units': 'metric', 'lang': 'ru', 'APPID': appid})
-data = res.json()
+data = (requests.get("http://api.openweathermap.org/data/2.5/weather", params = {'q': city, 'units': 'metric', 'lang': 'ru', 'APPID': appid})).json()
 print("------------------------------------------------")
 print(data)
 print("------------------------------------------------")
